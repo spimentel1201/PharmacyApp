@@ -20,7 +20,7 @@ class BottomNavBar extends StatelessWidget {
           ),
           BottonNavItem(
             title: "Ubicacion",
-            svgSrc: "assets/images/home-page.svg",
+            svgSrc: "assets/images/location.svg",
             isActive: true,
           ),
           BottonNavItem(
