@@ -6,7 +6,7 @@ import 'package:pharmacyapp/widgets/bottom_nav_bar.dart';
 //import 'package:flutter_svg/svg.dart';
 import 'package:pharmacyapp/widgets/category_card.dart';
 
-class HomePage extends StatelessWidget{
+class SearchPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var size= MediaQuery.of(context).size;
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget{
                     children: <Widget>[
                       Divider(),
                       Text(
-                        "Bienvenido",
+                        "Busqueda",
                         // ignore: deprecated_member_use
                         style: Theme.of(context).textTheme.display1.copyWith(fontWeight: FontWeight.w700),
                       ),
@@ -45,23 +45,9 @@ class HomePage extends StatelessWidget{
                             border: InputBorder.none,
                           )
                         )
-                      ),      
-                      /*Container(
-                        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(29.5),
                         ),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: "Buscar",
-                            prefixIcon: Icon(Icons.search),
-                            border: InputBorder.none,
-                          )
-                        )
-                      ),*/
                         Divider(),
-                        Expanded(
+                        /*Expanded(
                           child: GridView.count(
                             crossAxisCount: 2,
                             crossAxisSpacing: 20,
@@ -97,7 +83,7 @@ class HomePage extends StatelessWidget{
                               ),
                             ],
                           )
-                        )
+                        )*/
                     ],
                     )
                   )

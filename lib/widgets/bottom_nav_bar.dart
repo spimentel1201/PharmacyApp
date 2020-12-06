@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pharmacyapp/screens/details_screen.dart';
+import 'package:pharmacyapp/src/pages/home_page.dart';
+import 'package:pharmacyapp/src/pages/location_page.dart';
+import 'package:pharmacyapp/src/pages/search_page.dart';
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
     Key key,
@@ -8,8 +12,8 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-      height: 80,
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      height: 90,
       color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -17,15 +21,52 @@ class BottomNavBar extends StatelessWidget {
           BottonNavItem(
             title: "Inicio",
             svgSrc: "assets/images/home-page.svg",
+            //isActive: true,
+            press: (){
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(builder: (context){
+                                      return HomePage();
+                                    }),
+                                  );
+                                },
           ),
           BottonNavItem(
             title: "Ubicacion",
-            svgSrc: "assets/images/location.svg",
-            isActive: true,
+            svgSrc: "assets/images/location-pin.svg",
+            //isActive: false,
+            press: (){
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(builder: (context){
+                                      return LocationPage();
+                                    }),
+                                  );
+                                },
+          ),
+           BottonNavItem(
+            title: "Detalles",
+            svgSrc: "assets/images/home-page.svg",
+            press: (){
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(builder: (context){
+                                      return DetailScreen();
+                                    }),
+                                  );
+                                },
           ),
           BottonNavItem(
-            title: "Menu",
+            title: "Busqueda",
             svgSrc: "assets/images/home-page.svg",
+            press: (){
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(builder: (context){
+                                      return SearchPage();
+                                    }),
+                                  );
+                                },
           ),
         ],
       ),
