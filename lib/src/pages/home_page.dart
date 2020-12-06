@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget{
             Container(
               height: size.height * .23,
               decoration:  BoxDecoration(
-                color: Color(0xff64b5f6),
+                color: Color(0xFF0DA7A1),
               ),
               ),
               SafeArea(

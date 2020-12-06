@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AddToCart extends StatelessWidget {
@@ -18,15 +19,15 @@ class AddToCart extends StatelessWidget {
             width: 58,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
-              border: Border.all(
-              ),
+              /*border: Border.all(
+              ),*/
             ),
-            child: IconButton(
+            /*child: IconButton(
               icon: SvgPicture.asset(
-                "assets/icons/add_to_cart.svg",
+                "assets/images/add_to_cart.svg",
               ),
               onPressed: () {},
-            ),
+            ),*/
           ),
           Expanded(
             child: SizedBox(

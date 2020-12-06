@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pharmacyapp/screens/components/body.dart';
+import 'package:pharmacyapp/widgets/bottom_nav_bar.dart';
 
 class DetailsScreen extends StatelessWidget {
 
@@ -9,26 +10,27 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // each product have a color
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xFF0DA7A1),
       appBar: buildAppBar(context),
+      bottomNavigationBar: BottomNavBar(),
       body: Body(),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFF0DA7A1),
       elevation: 0,
       leading: IconButton(
         icon: SvgPicture.asset(
-          'assets/icons/back.svg',
+          'assets/images/back.svg',
           color: Colors.white,
         ),
         onPressed: () => Navigator.pop(context),
       ),
       actions: <Widget>[
         IconButton(
-          icon: SvgPicture.asset("assets/icons/search.svg"),
+          icon: SvgPicture.asset("assets/images/search.svg"),
           onPressed: () {},
         ),
         IconButton(
