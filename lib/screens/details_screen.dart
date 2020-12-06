@@ -1,51 +1,42 @@
 import 'package:flutter/material.dart';
-class DetailScreen extends StatelessWidget{
+import 'package:flutter_svg/svg.dart';
+import 'package:pharmacyapp/screens/components/body.dart';
+
+class DetailsScreen extends StatelessWidget {
+
+  const DetailsScreen({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          /*Container(
-            height: size.height * .45,
-            decoration: BoxDecoration(),
-          )*/
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox(
-                    height: size.height * 0.05,
-                    ),
-                  Text(
-                    "Farmacia1", 
-                    style: Theme.of(context)
-                        .textTheme
-                        // ignore: deprecated_member_use
-                        .display1
-                        .copyWith(fontWeight: FontWeight.w700),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Calle Saint #", 
-                    style:  TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 10),
-                  SizedBox(
-                    width: size.width * .6,
-                    child: Text(
-                      "Arequipa, Arequipa "
-                    ),
-                  ),
-                ],
-              ),
-            )
-          )
-        ],
-      ),
+      // each product have a color
+      backgroundColor: Colors.blue,
+      appBar: buildAppBar(context),
+      body: Body(),
     );
   }
-  
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      backgroundColor: Colors.white,
+      elevation: 0,
+      leading: IconButton(
+        icon: SvgPicture.asset(
+          'assets/icons/back.svg',
+          color: Colors.white,
+        ),
+        onPressed: () => Navigator.pop(context),
+      ),
+      actions: <Widget>[
+        IconButton(
+          icon: SvgPicture.asset("assets/icons/search.svg"),
+          onPressed: () {},
+        ),
+        IconButton(
+          icon: SvgPicture.asset("assets/icons/cart.svg"),
+          onPressed: () {},
+        ),
+        SizedBox(width: 20 / 2)
+      ],
+    );
+  }
 }
