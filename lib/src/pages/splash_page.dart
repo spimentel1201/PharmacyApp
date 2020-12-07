@@ -9,7 +9,7 @@ class SplashPage extends StatelessWidget {
       body: Center(
         child: SplashScreen(
           seconds: 5,
-          navigateAfterSeconds: 'home',
+          navigateAfterSeconds: 'typeuser',
           title: new Text('Pharmacy App'),
           image: new Image.asset('assets/logo.png'),
           backgroundColor: Colors.white,

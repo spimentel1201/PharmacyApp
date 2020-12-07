@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacyapp/src/pages/home_page.dart';
+import 'package:pharmacyapp/src/pages/login_page.dart';
 import 'package:pharmacyapp/src/pages/splash_page.dart';
+import 'package:pharmacyapp/typeuser/typeuser_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
       routes: {
         'splash': (BuildContext context) => SplashPage(),
         'home': (BuildContext context) => HomePage(),
+        'typeuser': (BuildContext context) => Typeuser(),
+        'login': (BuildContext context) => LoginPage(),
       },
     );
   }
