@@ -98,6 +98,9 @@ class LocationPageState extends State<LocationPage> {
         );
     }
   return Scaffold(
+        appBar: AppBar(
+          title: Text("Ubicacion"),
+        ),
         bottomNavigationBar: BottomNavBar(),
         body: Stack(
         children: <Widget>[
