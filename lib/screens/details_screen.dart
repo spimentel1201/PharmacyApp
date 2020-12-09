@@ -30,11 +30,11 @@ class DetailsScreen extends StatelessWidget {
       ),
       actions: <Widget>[
         IconButton(
-          icon: SvgPicture.asset("assets/images/search.svg"),
+          icon: SvgPicture.asset("assets/images/back.svg"),
           onPressed: () {},
         ),
         IconButton(
-          icon: SvgPicture.asset("assets/icons/cart.svg"),
+          icon: SvgPicture.asset("assets/images/back.svg"),
           onPressed: () {},
         ),
         SizedBox(width: 20 / 2)
