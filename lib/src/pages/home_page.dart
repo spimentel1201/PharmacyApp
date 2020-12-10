@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pharmacyapp/screens/details_screen.dart';
+import 'package:pharmacyapp/screens/details_screen2.dart';
 import 'package:pharmacyapp/widgets/bottom_nav_bar.dart';
 //import 'package:flutter_svg/svg.dart';
 //import 'package:flutter_svg/svg.dart';
@@ -90,7 +91,7 @@ class HomePage extends StatelessWidget{
                                   Navigator.push(
                                     context, 
                                     MaterialPageRoute(builder: (context){
-                                      return DetailScreen();
+                                      return DetailsScreen2();
                                     }),
                                   );
                                 },

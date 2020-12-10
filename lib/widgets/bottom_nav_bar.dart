@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pharmacyapp/profile/details_profile.dart';
 import 'package:pharmacyapp/screens/details_screen.dart';
+import 'package:pharmacyapp/screens/details_screen2.dart';
 import 'package:pharmacyapp/src/pages/home_page.dart';
 import 'package:pharmacyapp/src/pages/location_page.dart';
 import 'package:pharmacyapp/src/pages/search_page.dart';
@@ -21,6 +23,7 @@ class BottomNavBar extends StatelessWidget {
           BottonNavItem(
             title: "Inicio",
             svgSrc: "assets/images/home-page.svg",
+            //svgSrc: Icon(Icons.home),
             //isActive: true,
             press: (){
                                   Navigator.push(
@@ -34,6 +37,7 @@ class BottomNavBar extends StatelessWidget {
           BottonNavItem(
             title: "Ubicacion",
             svgSrc: "assets/images/location-pin.svg",
+            //svgSrc: Icon(Icons.location_on),
             //isActive: false,
             press: (){
                                   Navigator.push(
@@ -45,25 +49,27 @@ class BottomNavBar extends StatelessWidget {
                                 },
           ),
            BottonNavItem(
-            title: "Detalles",
-            svgSrc: "assets/images/home-page.svg",
-            press: (){
-                                  Navigator.push(
-                                    context, 
-                                    MaterialPageRoute(builder: (context){
-                                      return DetailScreen();
-                                    }),
-                                  );
-                                },
-          ),
-          BottonNavItem(
             title: "Busqueda",
-            svgSrc: "assets/images/home-page.svg",
+            svgSrc: "assets/images/buscar_n.svg",
+            //svgSrc: Icon(Icons.search),
             press: (){
                                   Navigator.push(
                                     context, 
                                     MaterialPageRoute(builder: (context){
                                       return SearchPage();
+                                    }),
+                                  );
+                                },
+          ),
+          BottonNavItem(
+            title: "Info",
+            svgSrc: "assets/images/man-user.svg",
+            //svgSrc: Icon(Icons.person_pin),
+            press: (){
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(builder: (context){
+                                      return DetailsProfile();
                                     }),
                                   );
                                 },
@@ -94,8 +100,8 @@ class BottonNavItem extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          SvgPicture.asset(svgSrc,color: isActive ? Color(0xFFE68342) : Color(0xFF222B45)),
-          //Icon(Icons.home, size: 28.0),
+          SvgPicture.asset(svgSrc,color: isActive ? Color(0xFFE68342) : Color(0xFF222B45),width:20),
+          //Icon(svgSrc, size: 28.0),
           Text(title, style: TextStyle(color: isActive ? Color(0xFFE68342) : Color(0xFF222B45))),
         ],
       ),
