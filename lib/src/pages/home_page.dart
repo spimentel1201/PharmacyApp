@@ -69,12 +69,13 @@ class HomePage extends StatelessWidget{
                             mainAxisSpacing: 20,
                             childAspectRatio: .85,
                             children: <Widget>[
+                              //for(int i=0;i<4;i++){
                               CategoryCard(
                                 title: "Farmacia 1",
                                 svgSrc: "assets/images/phar.png",
                                 press: (){}
                               ),
-                              CategoryCard(
+                              /*CategoryCard(
                                 title: "Farmacia 2",
                                 svgSrc: "assets/images/phar.png",
                                 press: (){}
@@ -95,7 +96,7 @@ class HomePage extends StatelessWidget{
                                     }),
                                   );
                                 },
-                              ),
+                              ),*/
                             ],
                           )
                         )
