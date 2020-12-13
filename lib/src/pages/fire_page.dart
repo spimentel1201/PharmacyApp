@@ -1,18 +1,12 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:pharmacyapp/screens/details_screen.dart';
-import 'package:pharmacyapp/screens/details_screen2.dart';
-import 'package:pharmacyapp/widgets/bottom_nav_bar.dart';
-//import 'package:flutter_svg/svg.dart';
-//import 'package:flutter_svg/svg.dart';
-import 'package:pharmacyapp/widgets/category_card.dart';
+/*import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
 
-class HomePage extends StatelessWidget{
+class FirePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var size= MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
+      //bottomNavigationBar: BottomNavBar(),
         body: Stack(
           children: <Widget>[
             Container(
@@ -61,6 +55,12 @@ class HomePage extends StatelessWidget{
                           )
                         )
                       ),*/
+                        StreamBuilder(
+                          stream: FirebaseDatabase.instance.collection(Farmacias).snapshot(),
+                          builder: (context,AsyncSnapshot<QuerySnapshot> snapshot){
+                            
+                          },
+                        ),
                         Divider(),
                         Expanded(
                           child: GridView.count(
@@ -70,12 +70,12 @@ class HomePage extends StatelessWidget{
                             childAspectRatio: .85,
                             children: <Widget>[
                               //for(int i=0;i<4;i++){
-                              CategoryCard(
+                              /*CategoryCard(
                                 title: "Farmacia 1",
                                 svgSrc: "assets/images/phar.png",
                                 press: (){}
-                              ),
-                              CategoryCard(
+                              ),*/
+                              /*CategoryCard(
                                 title: "Farmacia 2",
                                 svgSrc: "assets/images/phar.png",
                                 press: (){}
@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget{
                                     }),
                                   );
                                 },
-                              ),
+                              ),*/
                             ],
                           )
                         )
@@ -111,3 +111,4 @@ class HomePage extends StatelessWidget{
 }
 
 
+*/

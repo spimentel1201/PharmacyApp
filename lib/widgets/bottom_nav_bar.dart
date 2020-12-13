@@ -101,6 +101,7 @@ class BottonNavItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           SvgPicture.asset(svgSrc,color: isActive ? Color(0xFFE68342) : Color(0xFF222B45),width:20),
+          //Icon(svgSrc),
           //Icon(svgSrc, size: 28.0),
           Text(title, style: TextStyle(color: isActive ? Color(0xFFE68342) : Color(0xFF222B45))),
         ],

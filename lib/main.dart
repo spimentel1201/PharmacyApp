@@ -3,6 +3,7 @@ import 'package:pharmacyapp/src/pages/home_page.dart';
 import 'package:pharmacyapp/src/pages/login_page.dart';
 import 'package:pharmacyapp/src/pages/splash_page.dart';
 import 'package:pharmacyapp/typeuser/typeuser_page.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 void main() {
   runApp(MyApp());
