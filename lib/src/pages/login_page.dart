@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacyapp/src/pages/home_page.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'dart:async';
+import 'package:pharmacyapp/model/pharmacy.dart';
 
+final pharmacyReference = FirebaseDatabase.instance.reference().child('Farmacias');
 class LoginPage extends StatelessWidget {
   const LoginPage({Key key}) : super(key: key);
 
